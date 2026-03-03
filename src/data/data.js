@@ -80,7 +80,7 @@ export const photographers = [
       tiktokPackage: 400000,
     },
     portfolio: [
-      "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&h=800&fit=crop",
+      "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/290012007_762600821417793_5558173732924023626_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1d2534&_nc_ohc=SfN_cvngtPAQ7kNvwHfEm7k&_nc_oc=AdnhQYe_zr4pZbFEHCNNp1zFUYMe-Gq_i2jAIgMpp9fQH5bidx_kLZbiBGAop3j0by4XJ8xqaiqJFtbNh0QPjTcj&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=6gAEH81I-T7U1HDuKgGjmA&_nc_ss=8&oh=00_AfwGXebXscaOtXlJEZDYgsuDp2OX_6MikdXlZaX8soITAQ&oe=69AC28BA",
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1496440543089-3ef06b872312?w=600&h=800&fit=crop",
     ],
