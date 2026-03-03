@@ -10,6 +10,7 @@ import PresetShop from './pages/PresetShop';
 import CustomerDashboard from './pages/dashboard/CustomerDashboard';
 import PhotographerDashboard from './pages/dashboard/PhotographerDashboard';
 import AdminDashboard from './pages/dashboard/AdminDashboard';
+import InstantPage from './pages/InstantPage';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <Route path="/booking/:id" element={<BookingPage />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/presets" element={<PresetShop />} />
-            <Route path="/instant" element={<HomePage />} />
+            <Route path="/instant" element={<InstantPage />} />
             <Route path="/dashboard" element={<CustomerDashboard />} />
             <Route path="/dashboard/photographer" element={<PhotographerDashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
