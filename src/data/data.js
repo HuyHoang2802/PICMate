@@ -20,7 +20,7 @@ export const photographers = [
       tiktokPackage: 500000,
     },
     portfolio: [
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=800&fit=crop",
+      "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7",
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=600&h=600&fit=crop",
@@ -52,7 +52,7 @@ export const photographers = [
       tiktokPackage: 450000,
     },
     portfolio: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=800&fit=crop",
+      "https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/490594236_4178833795772206_5903617591298041777_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=53a332&_nc_ohc=FzvV_ceOw5gQ7kNvwHtxsM3&_nc_oc=Adk_5Lj3REBPGyTsCQ-heuBc4c9D16DkluRpU1tCk-oxzNOUjVR9KuxKD89sQQ4X4Tk1nvzqUG3u0aE2BqjCO0un&_nc_zt=23&_nc_ht=scontent.fsgn7-2.fna&_nc_gid=-BP5mSXTOYB05kfulhFqAw&_nc_ss=8&oh=00_Afx0BaLS3kciHUad1BOLbeOSp7jEWuJgL1NWmmezx2yHsw&oe=69AC1671",
       "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&h=600&fit=crop",
