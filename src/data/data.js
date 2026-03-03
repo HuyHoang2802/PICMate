@@ -3,9 +3,9 @@
 export const photographers = [
   {
     id: 1,
-    name: "Minh Anh",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
-    coverPhoto: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=400&fit=crop",
+    name: "Đào Nguyên Trọng",
+    avatar: "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7",
+    coverPhoto: "https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/503559455_3970017883216124_4565387162112293517_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=W7TzmaZ3rmoQ7kNvwF8UCgi&_nc_oc=AdkX8RqPUhC7vAKyEoAS0a5FXh_qHRLnxzs-a-GmPbI-LAHXit2fMNkg7LVcimiVmhD9jzCs92WMxW7Rq3eom3II&_nc_zt=23&_nc_ht=scontent.fsgn7-2.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_Afx1ixuCDFtzalrqTLQV4KsCLN2fcLFAXTMTkMQpgHa_LQ&oe=69AC3365",
     bio: "Chuyên chụp chân dung và lifestyle với phong cách Hàn Quốc nhẹ nhàng. 3 năm kinh nghiệm chụp ảnh phone-graphy.",
     styles: ["Hàn Quốc", "Lifestyle", "Minimal"],
     location: "Quận 1, TP.HCM",
