@@ -275,6 +275,108 @@
     font-size: 0.9rem;
 }
 
+/* Demo Banner */
+.demo-banner {
+    margin-bottom: var(--space-lg);
+    border: 1px solid rgba(108, 92, 231, 0.15);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: rgba(108, 92, 231, 0.03);
+}
+
+.demo-banner-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: 0.75rem var(--space-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary);
+    transition: background var(--transition-fast);
+}
+
+.demo-banner-toggle:hover {
+    background: rgba(108, 92, 231, 0.06);
+}
+
+.demo-accounts-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.demo-account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem var(--space-md);
+    text-align: left;
+    transition: background var(--transition-fast);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.06);
+}
+
+.demo-account-btn:last-child {
+    border-bottom: none;
+}
+
+.demo-account-btn:hover {
+    background: rgba(108, 92, 231, 0.06);
+}
+
+.demo-account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.demo-role {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.demo-email {
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-family: monospace;
+}
+
+.demo-pass {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.demo-login-icon {
+    color: var(--primary);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(108, 92, 231, 0.1);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.demo-account-btn:hover .demo-login-icon {
+    background: var(--primary);
+    color: white;
+}
+
+/* Auth Error */
+.auth-error {
+    padding: 0.75rem var(--space-md);
+    background: rgba(255, 107, 107, 0.08);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--accent-coral);
+    font-size: 0.85rem;
+    font-weight: 500;
+    animation: fadeInUp 0.3s ease;
+}
+
 @media (max-width: 900px) {
     .auth-container {
         grid-template-columns: 1fr;

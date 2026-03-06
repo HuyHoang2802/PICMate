@@ -282,7 +282,7 @@ export const mockBookings = [
   {
     id: "BK-20251215-001",
     photographerId: 1,
-    photographerName: "Minh Anh",
+    photographerName: "Đào Nguyên Trọng",
     photographerAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
     service: "Chụp ảnh sống ảo",
     date: "2025-12-20",
@@ -361,3 +361,44 @@ export const membershipPlans = [
 export const formatPrice = (price) => {
   return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
 };
+
+export const mockUsers = [
+  { id: 1, name: 'Nguyễn Văn A', email: 'nguyenvana@email.com', type: 'Khách hàng', active: true, joinDate: '2025-01-15', totalBookings: 12, totalSpent: 2400000 },
+  { id: 2, name: 'Trần Thị B', email: 'tranthib@email.com', type: 'Khách hàng', active: true, joinDate: '2025-02-20', totalBookings: 8, totalSpent: 1600000 },
+  { id: 3, name: 'Đào Nguyên Trọng', email: 'trongdao@email.com', type: 'Phone-Grapher', active: true, joinDate: '2024-11-10', totalBookings: 45, totalSpent: 0 },
+  { id: 4, name: 'Bùi Phạm Hải Đăng', email: 'dangbui@email.com', type: 'Phone-Grapher', active: true, joinDate: '2024-12-05', totalBookings: 38, totalSpent: 0 },
+  { id: 5, name: 'Lê Hoàng C', email: 'lehoangc@email.com', type: 'Khách hàng', active: false, joinDate: '2025-03-01', totalBookings: 2, totalSpent: 400000 },
+  { id: 6, name: 'Phạm Minh D', email: 'phamminhd@email.com', type: 'Khách hàng', active: true, joinDate: '2025-04-10', totalBookings: 5, totalSpent: 1000000 },
+  { id: 7, name: 'Bảo Vũ', email: 'baovu@email.com', type: 'Phone-Grapher', active: true, joinDate: '2025-01-20', totalBookings: 28, totalSpent: 0 },
+  { id: 8, name: 'Hoàng Long', email: 'hoanglong@email.com', type: 'Phone-Grapher', active: true, joinDate: '2025-02-15', totalBookings: 22, totalSpent: 0 },
+  { id: 9, name: 'Spam User', email: 'spam@email.com', type: 'Khách hàng', active: false, joinDate: '2025-05-01', totalBookings: 0, totalSpent: 0 },
+  { id: 10, name: 'Võ Thị E', email: 'vothie@email.com', type: 'Khách hàng', active: true, joinDate: '2025-06-12', totalBookings: 15, totalSpent: 3000000 },
+  { id: 11, name: 'Bích Ngọc', email: 'bichngoc@email.com', type: 'Phone-Grapher', active: true, joinDate: '2024-10-08', totalBookings: 55, totalSpent: 0 },
+  { id: 12, name: 'Quốc Bảo', email: 'quocbao@email.com', type: 'Phone-Grapher', active: true, joinDate: '2025-03-18', totalBookings: 18, totalSpent: 0 },
+];
+
+export const mockMessages = [
+  { id: 1, name: 'Đào Nguyên Trọng', avatar: 'https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7', lastMessage: 'Ok em, mai 2h chiều mình gặp nhau tại The Coffee House nhé!', time: '10:30', unread: 2, online: true },
+  { id: 2, name: 'Bảo Vũ', avatar: 'https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/290012007_762600821417793_5558173732924023626_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1d2534&_nc_ohc=SfN_cvngtPAQ7kNvwHfEm7k&_nc_oc=AdnhQYe_zr4pZbFEHCNNp1zFUYMe-Gq_i2jAIgMpp9fQH5bidx_kLZbiBGAop3j0by4XJ8xqaiqJFtbNh0QPjTcj&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=6gAEH81I-T7U1HDuKgGjmA&_nc_ss=8&oh=00_AfwGXebXscaOtXlJEZDYgsuDp2OX_6MikdXlZaX8soITAQ&oe=69AC28BA', lastMessage: 'Ảnh đã chỉnh xong rồi nha, em gửi qua Google Drive nhé', time: 'Hôm qua', unread: 0, online: true },
+  { id: 3, name: 'Bích Ngọc', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face', lastMessage: 'Cảm ơn anh/chị đã đánh giá 5 sao ạ 💜', time: '2 ngày trước', unread: 0, online: false },
+  { id: 4, name: 'Hỗ trợ PICMate', avatar: '', lastMessage: 'Chào bạn! Đơn hàng BK-20251220-003 đã được xử lý thành công.', time: '3 ngày trước', unread: 1, online: true },
+];
+
+export const mockDisputes = [
+  { id: 'DP-001', orderId: 'BK-20251215-001', reporter: 'Nguyễn Văn A', reporterAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face', against: 'Đào Nguyên Trọng', againstAvatar: 'https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7', reason: 'Thợ chụp đến muộn 30 phút, ảnh không đúng phong cách yêu cầu', priority: 'high', status: 'pending', date: '2025-12-18', amount: 200000 },
+  { id: 'DP-002', orderId: 'BK-20251218-002', reporter: 'Trần Thị B', reporterAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face', against: 'Bảo Vũ', againstAvatar: 'https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/290012007_762600821417793_5558173732924023626_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1d2534&_nc_ohc=SfN_cvngtPAQ7kNvwHfEm7k&_nc_oc=AdnhQYe_zr4pZbFEHCNNp1zFUYMe-Gq_i2jAIgMpp9fQH5bidx_kLZbiBGAop3j0by4XJ8xqaiqJFtbNh0QPjTcj&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=6gAEH81I-T7U1HDuKgGjmA&_nc_ss=8&oh=00_AfwGXebXscaOtXlJEZDYgsuDp2OX_6MikdXlZaX8soITAQ&oe=69AC28BA', reason: 'Yêu cầu hoàn tiền do thợ hủy đơn vào phút chót', priority: 'urgent', status: 'pending', date: '2025-12-20', amount: 400000 },
+  { id: 'DP-003', orderId: 'BK-20251210-005', reporter: 'Phạm Minh D', reporterAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face', against: 'Hoàng Long', againstAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face', reason: 'Chất lượng ảnh kém, không đạt mẫu thể hiện trong portfolio', priority: 'medium', status: 'resolved', date: '2025-12-12', amount: 170000 },
+];
+
+export const mockActivities = [
+  { id: 1, type: 'new_user', text: 'Võ Thị E đã đăng ký tài khoản mới', time: '5 phút trước', icon: '👤' },
+  { id: 2, type: 'booking', text: 'Đơn hàng BK-20251225-010 được tạo mới', time: '12 phút trước', icon: '📦' },
+  { id: 3, type: 'completed', text: 'Đơn hàng BK-20251220-003 đã hoàn thành', time: '1 giờ trước', icon: '✅' },
+  { id: 4, type: 'photographer', text: 'Lê Thị Mai đăng ký trở thành Phone-Grapher', time: '2 giờ trước', icon: '📸' },
+  { id: 5, type: 'dispute', text: 'Khiếu nại mới từ Trần Thị B về đơn BK-20251218-002', time: '3 giờ trước', icon: '⚠️' },
+  { id: 6, type: 'payment', text: 'Thanh toán 486,000đ cho Đào Nguyên Trọng', time: '4 giờ trước', icon: '💰' },
+  { id: 7, type: 'review', text: 'Đánh giá 5⭐ mới cho Bích Ngọc', time: '5 giờ trước', icon: '⭐' },
+  { id: 8, type: 'preset', text: 'Preset "Seoul Sunrise" được mua 15 lần hôm nay', time: '6 giờ trước', icon: '🎨' },
+];
+
+export const favoritePhotographerIds = [1, 3, 5];

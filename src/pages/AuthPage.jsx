@@ -1,12 +1,55 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Lock, User, Camera, Eye, EyeOff, Chrome } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Mail, Lock, User, Camera, Eye, EyeOff, LogIn, Info } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 import './AuthPage.css';
 
 export default function AuthPage() {
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [role, setRole] = useState('customer');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [showDemo, setShowDemo] = useState(false);
+
+    const { login, demoAccounts } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setError('');
+
+        if (!email || !password) {
+            setError('Vui lòng nhập đầy đủ email và mật khẩu!');
+            return;
+        }
+
+        const result = login(email, password);
+        if (result.success) {
+            navigate(result.redirect);
+        } else {
+            setError(result.message);
+        }
+    };
+
+    const handleDemoLogin = (account) => {
+        setEmail(account.email);
+        setPassword(account.password);
+        const result = login(account.email, account.password);
+        if (result.success) {
+            navigate(result.redirect);
+        }
+    };
+
+    const getRoleLabel = (role) => {
+        switch (role) {
+            case 'customer': return '👤 Khách hàng';
+            case 'photographer': return '📸 Phone-Grapher';
+            case 'admin': return '🔐 Admin';
+            default: return role;
+        }
+    };
 
     return (
         <div className="auth-page">
@@ -39,21 +82,50 @@ export default function AuthPage() {
                         <div className="auth-tabs">
                             <button
                                 className={`auth-tab ${isLogin ? 'active' : ''}`}
-                                onClick={() => setIsLogin(true)}
+                                onClick={() => { setIsLogin(true); setError(''); }}
                                 id="auth-tab-login"
                             >
                                 Đăng nhập
                             </button>
                             <button
                                 className={`auth-tab ${!isLogin ? 'active' : ''}`}
-                                onClick={() => setIsLogin(false)}
+                                onClick={() => { setIsLogin(false); setError(''); }}
                                 id="auth-tab-register"
                             >
                                 Đăng ký
                             </button>
                         </div>
 
-                        <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
+                        {/* Demo Accounts Banner */}
+                        <div className="demo-banner" id="demo-banner">
+                            <button className="demo-banner-toggle" onClick={() => setShowDemo(!showDemo)}>
+                                <Info size={16} />
+                                <span>Tài khoản demo có sẵn — Nhấn để xem</span>
+                            </button>
+                            {showDemo && (
+                                <div className="demo-accounts-list">
+                                    {demoAccounts.map((acc, i) => (
+                                        <button
+                                            key={i}
+                                            className="demo-account-btn"
+                                            onClick={() => handleDemoLogin(acc)}
+                                            id={`demo-login-${acc.role}`}
+                                        >
+                                            <div className="demo-account-info">
+                                                <span className="demo-role">{getRoleLabel(acc.role)}</span>
+                                                <span className="demo-email">{acc.email}</span>
+                                                <span className="demo-pass">Mật khẩu: {acc.password}</span>
+                                            </div>
+                                            <span className="demo-login-icon">
+                                                <LogIn size={16} />
+                                            </span>
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        <form className="auth-form" onSubmit={handleSubmit}>
                             {!isLogin && (
                                 <>
                                     {/* Role Selection */}
@@ -94,7 +166,14 @@ export default function AuthPage() {
                                 <label>Email</label>
                                 <div className="input-icon-wrapper">
                                     <Mail size={18} className="input-icon" />
-                                    <input type="email" className="input input-with-icon" placeholder="email@example.com" id="auth-email" />
+                                    <input
+                                        type="email"
+                                        className="input input-with-icon"
+                                        placeholder="email@example.com"
+                                        value={email}
+                                        onChange={(e) => { setEmail(e.target.value); setError(''); }}
+                                        id="auth-email"
+                                    />
                                 </div>
                             </div>
 
@@ -106,6 +185,8 @@ export default function AuthPage() {
                                         type={showPassword ? 'text' : 'password'}
                                         className="input input-with-icon"
                                         placeholder="••••••••"
+                                        value={password}
+                                        onChange={(e) => { setPassword(e.target.value); setError(''); }}
                                         id="auth-password"
                                     />
                                     <button type="button" className="input-toggle" onClick={() => setShowPassword(!showPassword)}>
@@ -113,6 +194,12 @@ export default function AuthPage() {
                                     </button>
                                 </div>
                             </div>
+
+                            {error && (
+                                <div className="auth-error" id="auth-error">
+                                    ⚠️ {error}
+                                </div>
+                            )}
 
                             {isLogin && (
                                 <div className="auth-extras">

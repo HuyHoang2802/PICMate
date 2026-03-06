@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -16,24 +17,26 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/explore" element={<ExplorePage />} />
-            <Route path="/photographer/:id" element={<PhotographerProfile />} />
-            <Route path="/booking/:id" element={<BookingPage />} />
-            <Route path="/auth" element={<AuthPage />} />
-            <Route path="/presets" element={<PresetShop />} />
-            <Route path="/instant" element={<InstantPage />} />
-            <Route path="/dashboard" element={<CustomerDashboard />} />
-            <Route path="/dashboard/photographer" element={<PhotographerDashboard />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <AuthProvider>
+        <div className="app">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/explore" element={<ExplorePage />} />
+              <Route path="/photographer/:id" element={<PhotographerProfile />} />
+              <Route path="/booking/:id" element={<BookingPage />} />
+              <Route path="/auth" element={<AuthPage />} />
+              <Route path="/presets" element={<PresetShop />} />
+              <Route path="/instant" element={<InstantPage />} />
+              <Route path="/dashboard" element={<CustomerDashboard />} />
+              <Route path="/dashboard/photographer" element={<PhotographerDashboard />} />
+              <Route path="/admin" element={<AdminDashboard />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </AuthProvider>
     </Router>
   );
 }
