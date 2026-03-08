@@ -12,6 +12,7 @@ import CustomerDashboard from './pages/dashboard/CustomerDashboard';
 import PhotographerDashboard from './pages/dashboard/PhotographerDashboard';
 import AdminDashboard from './pages/dashboard/AdminDashboard';
 import InstantPage from './pages/InstantPage';
+import DirectAccessRoute from './components/auth/DirectAccessRoute';
 import './App.css';
 
 function App() {
@@ -29,9 +30,21 @@ function App() {
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/presets" element={<PresetShop />} />
               <Route path="/instant" element={<InstantPage />} />
-              <Route path="/dashboard" element={<CustomerDashboard />} />
-              <Route path="/dashboard/photographer" element={<PhotographerDashboard />} />
-              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/dashboard" element={
+                <DirectAccessRoute role="customer">
+                  <CustomerDashboard />
+                </DirectAccessRoute>
+              } />
+              <Route path="/dashboard/photographer" element={
+                <DirectAccessRoute role="photographer">
+                  <PhotographerDashboard />
+                </DirectAccessRoute>
+              } />
+              <Route path="/admin" element={
+                <DirectAccessRoute role="admin">
+                  <AdminDashboard />
+                </DirectAccessRoute>
+              } />
             </Routes>
           </main>
           <Footer />
