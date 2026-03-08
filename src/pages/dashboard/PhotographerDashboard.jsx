@@ -86,8 +86,8 @@ export default function PhotographerDashboard() {
                 <div className="dashboard-layout">
                     <aside className="dashboard-sidebar">
                         <div className="dashboard-profile">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Photographer" className="avatar-lg" />
-                            <h3>Minh Anh</h3>
+                            <img src="https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7" alt="Photographer" className="avatar-lg" />
+                            <h3>Đào Nguyên Trọng</h3>
                             <span className="badge badge-info">📸 Phone-Grapher</span>
                         </div>
 
