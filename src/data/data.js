@@ -4,8 +4,8 @@ export const photographers = [
   {
     id: 1,
     name: "Đào Nguyên Trọng",
-    avatar: "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7",
-    coverPhoto: "https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/503559455_3970017883216124_4565387162112293517_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=W7TzmaZ3rmoQ7kNvwF8UCgi&_nc_oc=AdkX8RqPUhC7vAKyEoAS0a5FXh_qHRLnxzs-a-GmPbI-LAHXit2fMNkg7LVcimiVmhD9jzCs92WMxW7Rq3eom3II&_nc_zt=23&_nc_ht=scontent.fsgn7-2.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_Afx1ixuCDFtzalrqTLQV4KsCLN2fcLFAXTMTkMQpgHa_LQ&oe=69AC3365",
+    avatar: "/Trong.jpg",
+    coverPhoto: "/Trong2.jpg",
     bio: "Chuyên chụp chân dung và lifestyle với phong cách Hàn Quốc nhẹ nhàng. 3 năm kinh nghiệm chụp ảnh phone-graphy.",
     styles: ["Hàn Quốc", "Lifestyle", "Minimal"],
     location: "Quận 1, TP.HCM",
@@ -36,8 +36,8 @@ export const photographers = [
   {
     id: 2,
     name: "Bùi Phạm Hải Đăng",
-    avatar: "https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/490594236_4178833795772206_5903617591298041777_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=53a332&_nc_ohc=FzvV_ceOw5gQ7kNvwHtxsM3&_nc_oc=Adk_5Lj3REBPGyTsCQ-heuBc4c9D16DkluRpU1tCk-oxzNOUjVR9KuxKD89sQQ4X4Tk1nvzqUG3u0aE2BqjCO0un&_nc_zt=23&_nc_ht=scontent.fsgn7-2.fna&_nc_gid=-BP5mSXTOYB05kfulhFqAw&_nc_ss=8&oh=00_Afx0BaLS3kciHUad1BOLbeOSp7jEWuJgL1NWmmezx2yHsw&oe=69AC1671",
-    coverPhoto: "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-6/489467050_4172910049697914_7412824742557480438_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=HCsGPBkmILgQ7kNvwFl2ZKI&_nc_oc=AdkYeLClvFnvTH3QtE14BggBGSpPwLJYLSepnNFJ8gSA0bDdcUyRn-NIqm3FLd9M-cfoQn9ElHP1PY7ARehWEfvw&_nc_zt=23&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AGosYtdixr3qPIZ7BoXZVg&_nc_ss=8&oh=00_AfxDFPz4wMJA5pg69b8Mc2n9yjupFxcgHioBObRRQ64AWg&oe=69AC460F",
+    avatar: "/Dang.jpg",
+    coverPhoto: "/Dang22.jpg",
     bio: "Phone-Grapher chuyên chụp vintage và cá tính. Mình thích những bức ảnh raw, thật và có chiều sâu.",
     styles: ["Vintage", "Cá tính", "Lifestyle"],
     location: "Quận 3, TP.HCM",
@@ -64,8 +64,8 @@ export const photographers = [
   {
     id: 3,
     name: "Bảo Vũ",
-    avatar: "https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/290012007_762600821417793_5558173732924023626_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1d2534&_nc_ohc=SfN_cvngtPAQ7kNvwHfEm7k&_nc_oc=AdnhQYe_zr4pZbFEHCNNp1zFUYMe-Gq_i2jAIgMpp9fQH5bidx_kLZbiBGAop3j0by4XJ8xqaiqJFtbNh0QPjTcj&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=6gAEH81I-T7U1HDuKgGjmA&_nc_ss=8&oh=00_AfwGXebXscaOtXlJEZDYgsuDp2OX_6MikdXlZaX8soITAQ&oe=69AC28BA",
-    coverPhoto: "https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/475968653_1335838960760640_602905489566811051_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_1aHL6568n4Q7kNvwG_CYOm&_nc_oc=AdlNBGqbACR_3UtnAkZy78WZyAy8xUKod6P7rzACoKHcbm5sINU8IesePDnB4SNEFMdDQ9bkGL_4Suk_i1YJnxNv&_nc_zt=23&_nc_ht=scontent.fsgn7-2.fna&_nc_gid=EcaRkh3aGdmfPmjyfIcqdg&_nc_ss=8&oh=00_AfyrgzaWTPE8HO3tZ6R6ehU7AkwYotjEKp9mC0lFAdkweA&oe=69AC3264",
+    avatar: "/Bao.jpg",
+    coverPhoto: "/Bao22.jpg",
     bio: "Chuyên outdoor & lifestyle photography. Mình yêu ánh sáng tự nhiên và những khoảnh khắc đời thường.",
     styles: ["Lifestyle", "Minimal", "Hàn Quốc"],
     location: "Quận 7, TP.HCM",
