@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { AppDataProvider } from './context/AppDataContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -18,11 +19,12 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <div className="app">
-          <Navbar />
-          <main className="main-content">
-            <Routes>
+      <AppDataProvider>
+        <AuthProvider>
+          <div className="app">
+            <Navbar />
+            <main className="main-content">
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/explore" element={<ExplorePage />} />
               <Route path="/photographer/:id" element={<PhotographerProfile />} />
@@ -45,11 +47,12 @@ function App() {
                   <AdminDashboard />
                 </DirectAccessRoute>
               } />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </AuthProvider>
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </AuthProvider>
+      </AppDataProvider>
     </Router>
   );
 }

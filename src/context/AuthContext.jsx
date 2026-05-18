@@ -1,78 +1,63 @@
-import { createContext, useContext, useState } from 'react';
+﻿import { createContext, useContext, useState } from 'react';
+import { useAppData } from './AppDataContext';
+import { apiClient } from '../services/apiClient';
 
 const AuthContext = createContext(null);
 
-// Demo accounts
-const demoAccounts = [
-    {
-        email: 'khach@picmate.vn',
-        password: '123456',
-        name: 'Nguyễn Văn Khách',
-        role: 'customer',
-        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face',
-        redirect: '/dashboard',
-    },
-    {
-        email: 'photographer@picmate.vn',
-        password: '123456',
-        name: 'Đào Nguyên Trọng',
-        role: 'photographer',
-        avatar: 'https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/464473353_3769519109932670_1565250063960609805_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1d2534&_nc_ohc=lbRrefC4c2IQ7kNvwHmzsRn&_nc_oc=AdmL0Ye0JN88RvvXis9Sv2pnD8MeFBf_bJKGBOxzDyIMvH4czWRQTD6MejMaqLp9wt_1SRuUScRO_fvqxPlXBd0n&_nc_zt=24&_nc_ht=scontent.fsgn7-1.fna&_nc_gid=AkOnQUEZk2OubHikA_4cwA&_nc_ss=8&oh=00_AfwMb4fXvhU1mlpW5eb5jC6_-DMKrK64ex9HbGIOMXkrxw&oe=69AC0FA7',
-        redirect: '/dashboard/photographer',
-    },
-    {
-        email: 'admin@picmate.vn',
-        password: 'admin123',
-        name: 'Admin PICMate',
-        role: 'admin',
-        avatar: '',
-        redirect: '/admin',
-    },
+const fallbackDemoAccounts = [
+  { email: 'khach@picmate.vn', password: '123456', role: 'customer' },
+  { email: 'photographer@picmate.vn', password: '123456', role: 'photographer' },
+  { email: 'admin@picmate.vn', password: 'admin123', role: 'admin' },
 ];
 
 export function AuthProvider({ children }) {
-    const [user, setUser] = useState(() => {
-        const saved = localStorage.getItem('picmate_user');
-        return saved ? JSON.parse(saved) : null;
-    });
+  const { data } = useAppData();
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem('picmate_user');
+    return saved ? JSON.parse(saved) : null;
+  });
 
-    const login = (email, password) => {
-        const account = demoAccounts.find(
-            a => a.email === email && a.password === password
-        );
-        if (account) {
-            const userData = {
-                name: account.name,
-                email: account.email,
-                role: account.role,
-                avatar: account.avatar,
-                redirect: account.redirect,
-            };
-            setUser(userData);
-            localStorage.setItem('picmate_user', JSON.stringify(userData));
-            return { success: true, redirect: account.redirect };
-        }
-        return { success: false, message: 'Email hoặc mật khẩu không đúng!' };
-    };
+  const demoAccounts = data.demoAccounts?.length ? data.demoAccounts : fallbackDemoAccounts;
 
-    const logout = () => {
-        setUser(null);
-        localStorage.removeItem('picmate_user');
-    };
+  const login = async (email, password) => {
+    try {
+      const response = await apiClient.login(email, password);
+      const userData = {
+        name: response.name,
+        email: response.email,
+        role: response.role,
+        avatar: response.avatar,
+        redirect: response.redirect,
+      };
+      setUser(userData);
+      localStorage.setItem('picmate_user', JSON.stringify(userData));
+      localStorage.setItem('picmate_access_token', response.accessToken);
+      localStorage.setItem('picmate_refresh_token', response.refreshToken);
+      return { success: true, redirect: response.redirect };
+    } catch (error) {
+      return { success: false, message: error.message || 'Email ho?c m?t kh?u không dúng!' };
+    }
+  };
 
-    return (
-        <AuthContext.Provider value={{ user, login, logout, demoAccounts }}>
-            {children}
-        </AuthContext.Provider>
-    );
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('picmate_user');
+    localStorage.removeItem('picmate_access_token');
+    localStorage.removeItem('picmate_refresh_token');
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, login, logout, demoAccounts }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
 export function useAuth() {
-    const context = useContext(AuthContext);
-    if (!context) {
-        throw new Error('useAuth must be used within an AuthProvider');
-    }
-    return context;
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
 }
 
-export { demoAccounts };
